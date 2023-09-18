@@ -1,10 +1,8 @@
 import { View, Text, TextInput, Button } from "react-native";
 import React, { useState } from "react";
-import { FIREBASE_AUTH } from "../../../firebaseConfig";
 import styles from "./styles";
 
 const Auth = () => {
-    const auth = FIREBASE_AUTH;
     const [isSignUp, setIsSingUp] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
