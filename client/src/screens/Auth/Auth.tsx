@@ -2,18 +2,16 @@ import { View, Text, TextInput, Button } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useEffect, useState } from "react";
 import styles from "./styles";
-import { useDispatch } from 'react-redux';
-
+import {signin, signup } from '../../actions/auth';
 const Auth = () => {
     const [isSignUp, setIsSingUp] = useState(false);
     const [data, setData] = useState({username:'', email:'', password:'', passwordConfirm:''});
-    const dispatch = useDispatch();
 
     const handleSubmit = () => {
         if (isSignUp) {
-            dispatch();
+            signup(data);
         } else {
-            dispatch();
+            signin(data);
         }
     }
 
