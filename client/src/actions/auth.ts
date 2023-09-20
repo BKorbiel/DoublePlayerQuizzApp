@@ -9,7 +9,7 @@ interface props {
 
 export const signin = async (data : props) => {
 	try {
-		const {reqData} = await api.signIn(data);
+		await api.signIn(data);
 	}
 	catch(error) {
 		console.log(error);
@@ -18,7 +18,7 @@ export const signin = async (data : props) => {
 
 export const signup = async (data : props) => {
 	try {
-		const {reqData} = await api.signUp(data);
+		await api.signUp(data);
 	}
 	catch(error) {
 		console.log(error);

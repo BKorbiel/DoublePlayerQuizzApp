@@ -28,18 +28,18 @@ const Auth = () => {
     return (
         <View style={styles.container}>
             <Text>{isSignUp ? "Create a new account" : "Sign In"}</Text>
-            {isSignUp && 
+            <TextInput
+                value={data.email}
+                placeholder="Enter your email"
+                onChangeText={(text) => setData({...data, email: text})}
+            />
+            { isSignUp &&
                 <TextInput
-                    value={data.email}
-                    placeholder="Enter your email"
-                    onChangeText={(text) => setData({...data, email: text})}
+                    value={data.username}
+                    placeholder="Enter your username"
+                    onChangeText={(text) => setData({...data, username: text})}
                 />
             }
-            <TextInput
-                value={data.username}
-                placeholder="Enter your username"
-                onChangeText={(text) => setData({...data, username: text})}
-                />
             <TextInput
                 value={data.password}
                 placeholder="Enter your password"
